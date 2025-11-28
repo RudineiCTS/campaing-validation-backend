@@ -1,0 +1,28 @@
+{
+  "name": "campaign-validator-end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "dev:debug": "ts-node-dev --respawn --transpile-only --inspect=9229 src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^5.0.5",
+    "@types/mssql": "^9.1.8",
+    "@types/node": "^24.10.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "mssql": "^12.1.1"
+  }
+}
