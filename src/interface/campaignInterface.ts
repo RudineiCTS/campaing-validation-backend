@@ -1,38 +1,38 @@
 export interface IPharmaCampaign {
   type:string,
-  IDCampanha: number;
-  Campanha: string;
-  Competencia: string;
-  DataInicio: Date;
-  DataFim: Date;
-  Calculo: string;
-  Apuracao: string;
-  Objetivo: number;
-  Meta: string;
-  Ranking: string;
-  Valor: string;
-  PremiacaoTotal: number;
-  RecebimentoPremiacao: string;
-  Situacao: string;
+  idCampanha: number;
+  campanha: string;
+  competencia: string;
+  dataInicio: Date;
+  dataFim: Date;
+  calculo: string;
+  apuracao: string;
+  objetivo: number;
+  meta: string;
+  ranking: string;
+  valor: string;
+  premiacaoTotal: number;
+  recebimentoPremiacao: string;
+  situacao: string;
 }
 
 export interface ITelesalesCampaign {
   type:string,
-  IDCampanha: number;
-  Campanha: string;
-  DataInicio: Date;
-  DataFim: Date;
-  Competencia: Date;
-  TipoCampanha: string;
-  MetaValor: number;
-  RegraValidacao: string;
-  Calculo: string;
-  ConsideraExclusiva: string; // SIM / NÃO
+  idCampanha: number;
+  campanha: string;
+  dataInicio: Date;
+  dataFim: Date;
+  competencia: Date;
+  tipoCampanha: string;
+  metaValor: number;
+  regraValidacao: string;
+  calculo: string;
+  consideraExclusiva: string; // SIM / NÃO
 }
 
 
 export interface ReturnCampaign {
-  Campaigns: CampaignRow[];
+  campaigns: CampaignRow[];
 }
 
 export type CampaignRow =

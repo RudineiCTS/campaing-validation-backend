@@ -6,36 +6,36 @@ export function mapCampaign(row: any): IPharmaCampaign | ITelesalesCampaign {
     if (tipo === "Farma") {
         return {
             type: "Farma",
-            IDCampanha: row["IDCampanha"],
-            Campanha: row["Campanha"],
-            Competencia: row["Competência"],
-            DataInicio: row["Data Incio"],
-            DataFim: row["Data Fim"],
-            Calculo: row["Calculo"],
-            Apuracao: row["Apuração"],
-            Objetivo: row["Objetivo"],
-            Meta: row["Meta"],
-            Ranking: row["Ranking"],
-            Valor: row["Valor"],
-            PremiacaoTotal: row["Premiação Total"],
-            RecebimentoPremiacao: row["Recebimento de Premio"],
-            Situacao: row["Situação"]
+            idCampanha: row["IDCampanha"],
+            campanha: row["Campanha"],
+            competencia: row["Competência"],
+            dataInicio: row["Data Incio"],
+            dataFim: row["Data Fim"],
+            calculo: row["Calculo"],
+            apuracao: row["Apuração"],
+            objetivo: row["Objetivo"],
+            meta: row["Meta"],
+            ranking: row["Ranking"],
+            valor: row["Valor"],
+            premiacaoTotal: row["Premiação Total"],
+            recebimentoPremiacao: row["Recebimento de Premio"],
+            situacao: row["Situação"]
         };
     }
 
     if (tipo === "Televendas") {
         return {
             type: "Televendas",
-            IDCampanha: row["IDCampanha"],
-            Campanha: row["Campanha"],
-            Competencia: row["Competencia"],
-            DataInicio: row["Data Inicio"],
-            DataFim: row["Data Fim"],
-            TipoCampanha: row["Apuração"],  
-            MetaValor: row["Meta Valor"],
-            RegraValidacao: row["Regra Validação"],
-            Calculo: row["Calculo"],
-            ConsideraExclusiva: row["Considera Exclusiva"]
+            idCampanha: row["IDCampanha"],
+            campanha: row["Campanha"],
+            competencia: row["Competencia"],
+            dataInicio: row["Data Inicio"],
+            dataFim: row["Data Fim"],
+            tipoCampanha: row["Apuração"],  
+            metaValor: row["Meta Valor"],
+            regraValidacao: row["Regra Validação"],
+            calculo: row["Calculo"],
+            consideraExclusiva: row["Considera Exclusiva"]
         };
     }
 

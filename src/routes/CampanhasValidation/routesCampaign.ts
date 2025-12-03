@@ -4,7 +4,7 @@ import { loadCampaignModule } from '../../bootstrap/campaing';
 
 const routesCampaign = Router();
 
-routesCampaign.get("/campanhas", async (req, res) => {
+routesCampaign.post("/campanhas", async (req, res) => {
     const controller = await loadCampaignModule();
     return controller.listAll(req, res);
 });
