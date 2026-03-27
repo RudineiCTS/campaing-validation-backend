@@ -1,8 +1,14 @@
 import { Request, Response } from 'express';
 import {dtoParametersCampaign, IRepository} from '../../interface/repositoryInterface'
+import { injectable } from 'tsyringe';
+import { CampaignRepository } from '../../repository/campaignValidation';
 
+@injectable()
 export class CampaignController{    
-    constructor(private repository:IRepository){}
+    constructor(
+        //@inject("CampaignRepository")
+        private repository:CampaignRepository
+    ){}
 
     listAll = async(req: Request, res:Response)=>{
         const {competencyDate,isToSearchCampaingToFeed,isToSearchCampaingToPharma,isToSearchToTelesales } = req.body;

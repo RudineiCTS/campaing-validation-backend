@@ -1,10 +1,13 @@
 import sql from 'mssql';
 import { dtoParametersCampaign, IRepository } from '../interface/repositoryInterface';
-import { CampaignRow, IPharmaCampaign, ReturnCampaign } from '../interface/campaignInterface';
 import { mapCampaign } from '../utils/convertedReturnData';
+import { inject, injectable } from 'tsyringe';
 
+@injectable()
 export class CampaignRepository implements IRepository {
-    constructor(private db: sql.ConnectionPool) {}
+    constructor(
+        @inject("Database")
+        private db: sql.ConnectionPool) {}
 
     async getUnique(id: number): Promise<any> {
         const result = await this.db

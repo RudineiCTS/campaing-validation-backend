@@ -1,11 +1,11 @@
 import { Router } from 'express';
+import { container } from 'tsyringe';
 import { CampaignController } from '../../controller/campaign/CampaignController';
-import { loadCampaignModule } from '../../bootstrap/campaing';
 
 const routesCampaign = Router();
 
 routesCampaign.post("/campanhas", async (req, res) => {
-    const controller = await loadCampaignModule();
+    const controller = container.resolve(CampaignController);
     return controller.listAll(req, res);
 });
 
